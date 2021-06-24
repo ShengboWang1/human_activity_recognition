@@ -1,0 +1,41 @@
+# TFRecord
+create_tfr.shift_window_size = 125
+create_tfr.window_size = 250
+
+# Models
+#simple_rnn.n_neurons = 256
+#simple_rnn.dense_units = 64
+## simple_rnn.rnn_units = 128
+#simple_rnn.dropout_rate = 0.5
+#simple_rnn.window_size = 250
+# simple_rnn.n_batch = 32
+
+# CNN plus LSTM
+#cnn_lstm.n_filters = 64
+#cnn_lstm.dropout_rate = 0.5
+#cnn_lstm.window_size = 250
+#cnn_lstm.lstm_units = 64
+#cnn_lstm.dense_units = 64
+
+#Multi rnn
+multi_rnn.n_lstm = 3
+multi_rnn.n_dense = 3
+multi_rnn.rnn_units = 215
+multi_rnn.dense_units = 256
+multi_rnn.dropout_rate = 0.4209
+multi_rnn.kernel_initializer = "glorot_uniform"
+# multi_lstm.window_size = 120
+
+# Training
+Trainer.total_steps = 50000
+Trainer.log_interval = 100
+Trainer.ckpt_interval = 100
+
+# Input pipeline
+load.name = 'hapt'
+load.data_dir_local = '/Users/shengbo/Documents/Github/dl-lab-2020-team06/human_activity_recognition/'
+load.data_dir_gpu = '/home/RUS_CIP/st169852/st169852/dl-lab-2020-team06/human_activity_recognition/'
+load.data_dir_colab = '/content/drive/MyDrive/human_activity_recognition/'
+
+prepare.batch_size = 32
+prepare.caching = True
